@@ -1,6 +1,8 @@
 class Solution {
 public:
 
+   //Easiest Solution Ever
+
     bool areOccurrencesEqual(string s) {
 
        unordered_map<char , int> mp;
