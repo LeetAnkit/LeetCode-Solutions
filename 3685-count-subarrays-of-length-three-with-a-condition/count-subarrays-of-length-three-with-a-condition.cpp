@@ -5,7 +5,7 @@ public:
        const  int n = nums.size();
 
         for (int i = 1; i < n - 1; i++) {
-            if (2*(nums[i-1]+ nums[i+1]) -nums[i] ==0) {
+            if (2*(nums[i-1]+ nums[i+1]) == nums[i]) {
                 count++;
             }
         }
