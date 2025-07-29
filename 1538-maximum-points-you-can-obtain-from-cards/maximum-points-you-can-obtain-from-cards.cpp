@@ -17,9 +17,9 @@ public:
         }
         
         int currSum = minSum;
-        for (int i = windowSize; i < n; ++i) {
+        for (int i = windowSize; i < n; i++) {
             currSum += cardPoints[i] - cardPoints[i - windowSize];
-            minSum = std::min(minSum, currSum);
+            minSum = min(minSum, currSum);
         }
         
         return total - minSum;
