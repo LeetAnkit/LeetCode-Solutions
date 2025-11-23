@@ -6,14 +6,14 @@ public:
         vector<int> rem1; // nums % 3 == 1
         vector<int> rem2; // nums % 3 == 2
 
-        // 1️⃣ Calculate sum and track numbers by remainder
+        //  Calculate sum and track numbers by remainder
         for(int x : nums){
             sum += x;
             if(x % 3 == 1) rem1.push_back(x);
             else if(x % 3 == 2) rem2.push_back(x);
         }
 
-        // 2️⃣ If already divisible, return
+        //  If already divisible, return
         if(sum % 3 == 0) return sum;
 
         int rem = sum % 3;
@@ -24,7 +24,7 @@ public:
 
         int option1 = INT_MAX, option2 = INT_MAX;
 
-        // 3️⃣ Try removing numbers to fix remainder
+        // 3️ Try removing numbers to fix remainder
         if(rem == 1){
             // Option 1: remove smallest number with rem1
             if(rem1.size() >= 1) option1 = rem1[0];
